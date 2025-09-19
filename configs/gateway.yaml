@@ -1,0 +1,13 @@
+tcp:
+  addr: ":9001"
+  heartbeat_interval: 30s
+  session_timeout: 90s
+  time_window_sec: 300
+
+http:
+  addr: ":8080"
+
+auth:
+  keys:
+    A1: "K_SECRET_ABC"
+    A2: "K_SECRET_DEF"

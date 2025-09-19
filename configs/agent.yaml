@@ -1,0 +1,19 @@
+server_addr: "localhost:9001"
+appid: "A1"
+sn: "SN123456"
+key: "K_SECRET_ABC"
+open_url: "https://example.com"
+
+serve:
+  enable: true
+  addr: "127.0.0.1:18765"
+  root: "./static"
+
+proxy:
+  enable: false
+  target: "https://portal.example.com"
+  mount: "/proxy/"
+
+reconnect:
+  min_ms: 500
+  max_ms: 15000
