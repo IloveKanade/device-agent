@@ -1,0 +1,33 @@
+# Development override file
+# Use with: docker-compose -f docker-compose.yml -f docker-compose.override.yml up
+
+version: '3.8'
+
+services:
+  device-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ENV=development
+      - DEBUG=true
+    volumes:
+      # Mount source code for development
+      - .:/app
+      - /app/frontend/node_modules
+    ports:
+      - "8080:8080"
+      - "34115:34115"  # Wails dev server port
+
+  # Disable optional services in development
+  nginx:
+    profiles:
+      - production
+
+  postgres:
+    profiles:
+      - database
+
+  redis:
+    profiles:
+      - cache

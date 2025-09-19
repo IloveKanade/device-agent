@@ -1,0 +1,39 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+CLAUDE.md
+*.md
+
+# Development files
+.claude/
+logs/
+tmp/
+
+# Build artifacts
+build/
+dist/
+frontend/dist/
+frontend/node_modules/
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Wails specific
+app.syso
+wails.json
